@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
+    <title>Spotify Login</title>
+    <style>
+      @media (max-width: 790px) {
+        #icons-small {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-center">
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="homePage.html">
+          <img src="img/Spotify_logo 4.png" width="210px" alt="Spotify logo" />
+        </a>
+      </nav>
+    </div>
+    <hr />
+
+    <div class="container">
+      <div class="row d-flex justify-content-center pt-3">
+        <div class="col-12 col-md-8 col-lg-5 col-xl-5">
+          <h6 id="continue" class="font-weight-bold text-center">
+            To continue, log in to Spotify
+          </h6>
+
+          <a
+            id="btn-fb"
+            class="facebook btn btn-primary btn-lg btn-block py-2"
+            href="#"
+            role="button"
+          >
+            <i id="icons-small" class="bi bi-facebook px-2"></i> CONTINUE WITH
+            FACEBOOK</a
+          >
+          <a
+            id="apple"
+            class="btn btn-dark btn-lg btn-block py-2"
+            href="#"
+            role="button"
+          >
+            <ion-icon class="px-2" name="logo-apple"></ion-icon>
+            CONTINUE WITH APPLE</a
+          >
+
+          <div class="py-2">
+            <p id="or"><span>OR</span></p>
+          </div>
+
+          <div class="form-label-group my-2">
+            <input
+              type="email"
+              id="inputEmail"
+              class="form-control"
+              placeholder="Email address or username"
+              required=""
+              autofocus=""
+            />
+          </div>
+          <div class="form-label-group">
+            <input
+              type="password"
+              id="inputPassword"
+              class="form-control"
+              placeholder="Password"
+              required=""
+            />
+            <br />
+            <div
+              class="custom-control custom-checkbox mb-3"
+              style="text-align: left"
+            >
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                value="remember-me"
+                id="customCheck1"
+              />
+              <label
+                id="remember"
+                class="custom-control-label text-muted"
+                for="customCheck1"
+              >
+                <h6>Remember me</h6>
+              </label>
+              <button
+                id="btn-login"
+                type="button"
+                class="btn btn-secondary btn-lg px-4"
+              >
+                LOG IN
+              </button>
+            </div>
+
+            <a href="#" id="forgot">
+              <h5 id="forgot">Forgot your password?</h5></a
+            >
+            <hr />
+
+            <h3 id="h3-account" class="mb-3 font-weight-bold">
+              Don't have an account?
+            </h3>
+            <div class="py-2">
+              <button
+                id="btn-signup"
+                type="button"
+                class="btn btn-block btn-outline-dark"
+              >
+                SIGN UP FOR SPOTIFY
+              </button>
+            </div>
+
+            <hr />
+            <p id="notice" class="text-black-50">
+              If you click "log in with Facebook" and are not a Spotify user,
+              you will be registered and you agree to Spotify's<span
+                ><a href="#"> Terms & Conditions</a> </span
+              >and<span><a href="#"> Privacy Policy.</a> </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for iconics -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

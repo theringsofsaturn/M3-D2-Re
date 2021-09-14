@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<title>player</title>
+		<style>
+			div#musicText div a.musicName {
+				color: #fff !important;
+				font-size: 12px;
+				font-weight: 400;
+				margin: 0px;
+			}
+
+			div #musicImage {
+				width: 100%;
+				height: auto;
+			}
+
+			.hr {
+				border: 2px solid #505050;
+				width: 100%;
+			}
+
+			.span {
+				color: white;
+			}
+
+			#player {
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: auto;
+				background-color: #181818 !important;
+				z-index: 1;
+			}
+
+			div#like > img:hover,
+			div#iconContainer > img:hover,
+			div#queue > img:hover,
+			div#connect > img:hover,
+			div#volume > img:hover,
+			div#cover > img:hover {
+				cursor: pointer;
+			}
+			.lin-clamp {
+				-webkit-line-clamp: 2;
+				line-height: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="player">
+			<div
+				id="playerContainer"
+				class="container-fluid m-0 p-0 d-flex align-items-center"
+			>
+				<div class="row d-flex w-100 m-0 p-0 align-items-center">
+					<div
+						class="col-12 col-sm-3 col-xl-2 m-0 p-0 d-flex align-items-center"
+					>
+						<div class="row ml-0 p-4 p-sm-2 d-flex align-items-center">
+							<div
+								id="cover"
+								class="col-4 col-md-3 m-0 p-0 d-flex align-items-center"
+							>
+								<img
+									id="musicImage"
+									src="assets/albumCover9.jpg"
+									alt="Current Music Image"
+								/>
+							</div>
+							<div class="col-8 m-0 p-0 d-flex align-items-center">
+								<div class="row m-0 p-0 d-flex align-items-center">
+									<div class="col-12 m-0 p-0 d-flex align-items-center">
+										<div class="row m-0 p-0 d-flex align-items-center">
+											<div id="musicText" class="col-5 m-0 p-0">
+												<div class="col-12 m-0 p-2 lin-clamp">
+													<span
+														><a class="musicName" href=""
+															>White Dragon, Tbak
+														</a></span
+													>
+												</div>
+											</div>
+											<div id="like" class="col-auto m-0 p-2">
+												<img
+													src="icons/heart.png"
+													alt="like icon"
+													width="18"
+													height="18"
+												/>
+												<img
+													src="icons/screen.png"
+													alt="Screen icon"
+													width="18"
+													height="18"
+													class="d-sm-none d-md-inline-block ml-lg-2"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ///////////////////////////////////////// -->
+					<div class="col-12 col-sm-4 col-xl-5 d-flex align-items-center">
+						<div class="container m-0 p-0">
+							<div
+								id="icons"
+								class="row d-flex justify-content-around pt-2 align-items-center"
+							>
+								<div
+									id="iconContainer"
+									class="col-6 d-flex justify-content-around align-items-center"
+								>
+									<img
+										src="icons/shuffle.png"
+										alt="shuffle icon"
+										width="18"
+										height="18"
+									/>
+									<img
+										src="icons/previouse.png"
+										alt="previouse icon"
+										width="18"
+										height="18"
+									/>
+									<img
+										src="icons/play.png"
+										alt="play icon"
+										width="18"
+										height="18"
+									/>
+									<img
+										src="icons/next.png"
+										alt="next icon"
+										width="18"
+										height="18"
+									/>
+									<img
+										src="icons/repeat.png"
+										alt="repeat icon"
+										width="18"
+										height="18"
+									/>
+								</div>
+							</div>
+							<div class="row d-flex align-items-center">
+								<div class="col-12 d-flex align-items-center">
+									<span class="span">0:00</span>
+									<hr class="hr" />
+									<span class="span">0:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ////////////////////////////////////////////// -->
+					<div
+						class="col-12 col-sm-5 p-3 p-sm-0 d-flex justify-content-center justify-content-sm-end align-items-center"
+					>
+						<div id="queue" class="col-1">
+							<img
+								src="icons/queue.png"
+								alt="volume icon"
+								width="18"
+								height="18"
+							/>
+						</div>
+						<div id="connect" class="col-1">
+							<img
+								src="icons/connect.png"
+								alt="connect icon"
+								width="18"
+								height="18"
+							/>
+						</div>
+						<div id="volume" class="col-1">
+							<img
+								src="icons/volume.png"
+								alt="volume icon"
+								width="20"
+								height="20"
+							/>
+						</div>
+						<div class="col-5 col-sm-3"><hr class="hr" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

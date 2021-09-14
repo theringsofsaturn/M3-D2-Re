@@ -1,0 +1,701 @@
+@font-face {
+  font-family: "spotify-black";
+  src: url("lineto-circular-black.ttf");
+}
+@font-face {
+  font-family: "spotify-bold";
+  src: url("lineto-circular-pro-bold.ttf");
+}
+@font-face {
+  font-family: "spotify-book";
+  src: url("lineto-circular-pro-book.ttf");
+}
+@font-face {
+  font-family: "spotify-medium";
+  src: url("lineto-circular-pro-medium.ttf");
+}
+
+body main div.page-content div#albumStyle {
+  background-color: #191919;
+}
+
+body#sidemenu .side {
+  background-color: #070d14;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+}
+
+body#sidemenu .logo {
+  height: 40px;
+}
+
+body#sidemenu .menu {
+  color: white;
+}
+body#sidemenu .menu ul {
+  list-style: none;
+}
+
+body#sidemenu .menu li {
+  padding-left: 18px;
+}
+body#sidemenu .menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+body#sidemenu .menu li.active {
+  border-left: 4px solid #41d76d;
+  padding-left: 14px;
+}
+
+body#sidemenu .buttons .sign-up {
+  height: 30px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  outline: none;
+}
+body#sidemenu .buttons .sign-up:hover {
+  color: #41d76d;
+  outline: none;
+}
+body#sidemenu .buttons .login {
+  height: 30px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: #070d14;
+  color: rgb(192, 192, 192);
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 2px solid rgb(192, 192, 192);
+}
+body#sidemenu .buttons .login:hover {
+  color: #41d76d;
+  outline: none;
+}
+body#sidemenu .buttons p {
+  color: rgb(192, 192, 192);
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+body#sidemenu .buttons .install {
+  margin-right: 15px;
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+  margin-bottom: 50px;
+  font-family: "spotify-medium";
+  letter-spacing: 00.01rem;
+}
+body#sidemenu .buttons .install:hover {
+  color: white;
+}
+
+body#sidemenu .buttons .cookie {
+  margin-right: 15px;
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+}
+body#sidemenu .buttons .privacy {
+  margin-left: 15px;
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+}
+body#sidemenu .side-mobile .top-bar {
+  background-color: #070d14;
+  height: 50px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+body#sidemenu .side-mobile .menu-body {
+  background-color: #070d14;
+  height: 100vh;
+}
+body#sidemenu .side-mobile {
+  display: none;
+}
+
+#pageContent {
+  padding-left: 200px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
+}
+
+.home-content {
+  background: rgb(37, 70, 110);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 70, 110, 1) 0%,
+    rgba(2, 4, 7, 1) 100%
+  );
+  height: 100vh;
+}
+
+main .top-menu li {
+  display: inline-block;
+  list-style: none;
+  color: #95a0ae;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.top-menu li.active {
+  color: #ffffff;
+}
+
+.albums h2 {
+  color: white;
+  font-weight: bold;
+}
+.legends h2 {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 991px) {
+  body#sidemenu .side {
+    display: none;
+  }
+  body#sidemenu .side-mobile {
+    display: block;
+  }
+  #pageContent {
+    padding-left: 0;
+    padding-top: 50px;
+    height: 100%;
+  }
+}
+/* sidemenu styles end */
+
+#album-title {
+  font-family: "spotify-bold";
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+}
+.artist {
+  font-family: "spotify-book";
+}
+.songs {
+  font-family: "spotify-medium";
+  color: #f8f8f8;
+  font-size: 15px;
+  letter-spacing: 0.05rem;
+}
+
+.play-btn {
+  border-radius: 20px;
+  font-family: "spotify-book";
+  font-size: 12px;
+  width: 120px;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.play-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.label {
+  font-family: "spotify-book";
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+}
+.liked {
+  color: #40a846;
+}
+.like:hover {
+  transform: scale(1.2, 1.2);
+}
+.threeDots:hover {
+  color: #f8f8f8 !important;
+}
+
+h6 #continue {
+  font-family: "spotify-bold";
+  font-size: 1rem;
+}
+
+#btn-fb {
+  background-color: #3e5a9b;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: "spotify-black";
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+}
+#btn-fb:hover {
+  transform: scale(1.02, 1.02);
+}
+
+#apple {
+  background-color: #000000;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: "spotify-black";
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+}
+#apple:hover {
+  transform: scale(1.02, 1.02);
+}
+#or {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  font-family: "spotify-bold";
+  font-size: 0.7rem;
+}
+#or span {
+  background: #fff;
+  padding: 0 10px;
+  color: black;
+}
+
+#btn-login {
+  border-color: #55b950;
+  background-color: #55b950;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  width: 10rem;
+  font-family: "spotify-black";
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+#btn-login:hover {
+  transform: scale(1.02, 1.02);
+}
+
+#remember h6 {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-family: "spotify-book";
+}
+#forgot {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #55b950;
+  padding-bottom: 1rem;
+  font-family: "spotify-book";
+}
+#h3-account {
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  font-family: "spotify-black";
+}
+#btn-signup {
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: "spotify-black";
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+#notice {
+  font-size: 0.7rem;
+  text-align: center;
+  font-family: "spotify-book";
+}
+#notice a {
+  color: #55b950;
+}
+.custom-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-control:focus {
+  border-color: #55b950;
+  box-shadow: 0 0 0 0.2rem rgb(85 185 80 / 25%);
+}
+.form-control {
+  font-size: 0.6rem;
+  font-size: 0.8rem;
+}
+
+/* above roles to change the checkbox to green */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #55b950 !important;
+}
+.custom-checkbox
+  .custom-control-input:checked:focus
+  ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #55b950, 0 0 0 0.2rem rgba(85, 185, 80, 0.25);
+}
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(85, 185, 80, 0.25);
+}
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+  background-color: #55b950;
+}
+
+body#sidemenu .side {
+  background-color: #070d14;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+}
+h1 {
+  font-family: "spotify-black" !important;
+}
+p {
+  font-family: "spotify-medium" !important;
+}
+span {
+  font-family: "spotify-book" !important;
+}
+button {
+  font-family: "spotify-book";
+}
+
+body#sidemenu .logo {
+  height: 40px;
+}
+
+body#sidemenu .menu {
+  color: white;
+}
+body#sidemenu .menu ul {
+  list-style: none;
+}
+
+body#sidemenu .menu li {
+  padding-left: 18px;
+}
+body#sidemenu .menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+body#sidemenu .menu li.active {
+  border-left: 4px solid #41d76d;
+  padding-left: 14px;
+}
+
+body#sidemenu .buttons .sign-up {
+  height: 30px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  outline: none;
+}
+body#sidemenu .buttons .sign-up:hover {
+  color: #41d76d;
+  outline: none;
+}
+body#sidemenu .buttons .login {
+  height: 30px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: #070d14;
+  color: rgb(192, 192, 192);
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 2px solid rgb(192, 192, 192);
+}
+body#sidemenu .buttons .login:hover {
+  color: #41d76d;
+  outline: none;
+}
+body#sidemenu .buttons p {
+  color: rgb(192, 192, 192);
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+body#sidemenu .buttons .cookie {
+  margin-right: 15px;
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+}
+body#sidemenu .buttons .privacy {
+  margin-left: 15px;
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+}
+body#sidemenu .side-mobile .top-bar {
+  background-color: #070d14;
+  height: 50px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+body#sidemenu .side-mobile .menu-body {
+  background-color: #070d14;
+  height: 100vh;
+}
+body#sidemenu .side-mobile {
+  display: none;
+}
+
+#pageContent {
+  padding-left: 200px;
+  width: 100%;
+}
+
+.home-content {
+  background: rgb(37, 70, 110);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 70, 110, 1) 0%,
+    rgba(2, 4, 7, 1) 100%
+  );
+  height: 100vh;
+}
+
+.top-menu li {
+  display: inline-block;
+  list-style: none;
+  color: #95a0ae;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.top-menu li.active {
+  color: #ffffff;
+}
+
+.single-album {
+  width: 100px;
+}
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 991px) {
+  body#sidemenu .side {
+    display: none;
+  }
+  body#sidemenu .side-mobile {
+    display: block;
+  }
+  #pageContent {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+}
+
+body.artist-page {
+  background-color: #181818;
+}
+#container-fluid {
+  background-image: url(assets/image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
+}
+h1,
+h4,
+h5,
+p,
+.bi,
+span {
+  color: white;
+}
+h1 {
+  padding: 0px;
+  margin: -15px;
+  font-size: 80px;
+}
+.btn-dark {
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.follow {
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.hover {
+  border-bottom: 2px solid #28a745;
+}
+div.overview div.col-10 span > span:hover {
+  border-bottom: 2px solid #28a745;
+}
+
+.artist-page .bi {
+  font-size: 50px;
+}
+
+.album {
+  width: 100%;
+  height: auto;
+}
+.albumText {
+  width: 100%;
+  height: 60px;
+  white-space: wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.albumText > p {
+  padding: 10px 0px 0px 0px;
+  margin: 0px !important;
+  margin-top: 5px !important;
+  line-height: 15px !important;
+}
+
+div#musicText div a.musicName {
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+div #musicImage {
+  width: 100%;
+  height: auto;
+}
+
+.hr {
+  border: 2px solid #505050;
+  width: 100%;
+}
+
+.span {
+  color: white;
+}
+
+#player {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #333333 !important;
+  z-index: 2;
+}
+
+div#like > img:hover,
+div#iconContainer > img:hover,
+div#queue > img:hover,
+div#connect > img:hover,
+div#volume > img:hover,
+div#cover > img:hover {
+  cursor: pointer;
+}
+.lin-clamp {
+  -webkit-line-clamp: 2;
+  line-height: 12px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    margin-top: -30px;
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    margin-top: -25px;
+  }
+}
+@media (max-width: 300px) {
+  .overview {
+    display: none;
+  }
+  h1 {
+    margin-top: -15px;
+  }
+}
+
+@media (max-width: 790px) {
+  .bi {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 575px) {
+  .margin-sm {
+    margin-bottom: 85px;
+  }
+}
+@media (min-width: 530px) and (max-width: 575px) {
+  #margin {
+    margin-bottom: 380px !important;
+  }
+}
+@media (min-width: 490px) and (max-width: 529px) {
+  #margin {
+    margin-bottom: 350px !important;
+  }
+}
+@media (min-width: 440px) and (max-width: 489px) {
+  #margin {
+    margin-bottom: 330px !important;
+  }
+}
+@media (min-width: 377px) and (max-width: 439px) {
+  #margin {
+    margin-bottom: 315px !important;
+  }
+}
+@media (min-width: 339px) and (max-width: 376px) {
+  #margin {
+    margin-bottom: 295px !important;
+  }
+}
+@media (min-width: 310px) and (max-width: 338px) {
+  #margin {
+    margin-bottom: 285px !important;
+  }
+}
+@media (min-width: 270px) and (max-width: 309px) {
+  #margin {
+    margin-bottom: 273px !important;
+  }
+}
+@media (min-width: 235px) and (max-width: 269px) {
+  #margin {
+    margin-bottom: 260px !important;
+  }
+}
+@media (min-width: 210px) and (max-width: 234px) {
+  #margin {
+    margin-bottom: 247px !important;
+  }
+}
+@media (min-width: 178px) and (max-width: 209px) {
+  #margin {
+    margin-bottom: 227px !important;
+  }
+}
+@media (min-width: 143px) and (max-width: 177px) {
+  #margin {
+    margin-bottom: 265px !important;
+  }
+}
+@media (min-width: 50px) and (max-width: 142px) {
+  #margin {
+    margin-bottom: 280px !important;
+  }
+}
+
+main .top-menu li:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav.side div.menu a:hover {
+  color: white !important;
+}

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
+    <title>Spotify-Album page</title>
+    <style>
+      .artist:hover {
+        text-decoration: none;
+        transform: scaleX(1.1);
+      }
+
+      @media (max-width: 790px) {
+        #icons-small {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body id="sidemenu">
+    <main>
+      <nav class="side">
+        <div class="d-flex pr-2" style="justify-content: center">
+          <a href="homePage.html"
+            ><img
+              class="logo mt-4"
+              src="./assets/sidemenu/Untitled-1.png"
+              alt="spotify logo"
+          /></a>
+        </div>
+        <div class="menu mt-5">
+          <ul class="px-0">
+            <li class="mt-3 active">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="26"
+                height="26"
+                style="fill: white; padding-bottom: 4px; margin-right: 8px"
+              >
+                <path
+                  d="M12.97 2.59a1.5 1.5 0 00-1.94 0l-7.5 6.363A1.5 1.5 0 003 10.097V19.5A1.5 1.5 0 004.5 21h4.75a.75.75 0 00.75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 001.5-1.5v-9.403a1.5 1.5 0 00-.53-1.144l-7.5-6.363z"
+                ></path>
+              </svg>
+
+              <a href="homePage.html">Home</a>
+            </li>
+            <li class="mt-3 text-muted">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="26"
+                height="26"
+                style="
+                  fill: white;
+                  padding-bottom: 4px;
+                  opacity: 50%;
+                  margin-right: 8px;
+                "
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"
+                ></path>
+              </svg>
+              <a href="#" class="text-muted">Search</a>
+            </li>
+            <li class="mt-3">
+              <span
+                ><img
+                  style="
+                    width: 18px;
+                    margin-right: 15px;
+                    opacity: 50%;
+                    padding-bottom: 3px;
+                    margin-left: 7px;
+                  "
+                  src="./assets/sidemenu/library.png"
+                  alt="home" /></span
+              ><a href="#" class="text-muted">Your Library</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="buttons d-flex"
+          style="
+            flex-direction: column;
+            justify-content: flex-end;
+            /* height: 65%; */
+            align-items: center;
+            position: absolute;
+            bottom: 10px;
+            left: 23px;
+          "
+        >
+          <!-- <button class="sign-up">SIGN UP</button> -->
+
+          <a href="#" class="install"
+            ><i
+              id="icons-small"
+              class="bi bi-arrow-down-circle text-white-50 pr-2"
+            ></i
+            >Install App</a
+          >
+          <hr />
+
+          <!-- <button class="login mt-2">LOGIN</button> -->
+          <!-- <p>
+            <a href="#" class="cookie"> Cookie</a> |<a href="#" class="privacy"
+              >Privacy Policy</a
+            >
+          </p> -->
+        </div>
+      </nav>
+      <nav class="side-mobile">
+        <div class="container-fluid w-100 top-bar d-flex">
+          <a href="homePage.html"
+            ><img
+              src="./assets/sidemenu/Untitled-1.png "
+              height="36px"
+              alt="spotify logo"
+            />
+          </a>
+
+          <svg
+            height="20pt"
+            viewBox="0 -53 384 384"
+            width="20pt"
+            xmlns="http://www.w3.org/2000/svg"
+            style="fill: rgb(255, 255, 255)"
+            id="menu-button"
+          >
+            <path
+              d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            />
+            <path
+              d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            />
+            <path
+              d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            />
+          </svg>
+          <svg
+            height="20"
+            viewBox="0 0 329.26933 329"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              fill: rgb(255, 255, 255);
+              position: absolute;
+              right: 19px;
+              opacity: 0;
+            "
+            id="close-button"
+            class=""
+          >
+            <path
+              d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"
+            />
+          </svg>
+        </div>
+        <div class="menu-body d-none" id="menuBody">
+          <nav class="side-body-mobile">
+            <div class="menu" style="position: absolute; top: 80px">
+              <ul class="px-0">
+                <li class="mt-3 active">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    style="
+                      fill: rgb(255, 255, 255);
+                      padding-bottom: 4px;
+                      margin-right: 8px;
+                    "
+                  >
+                    <path
+                      d="M12.97 2.59a1.5 1.5 0 00-1.94 0l-7.5 6.363A1.5 1.5 0 003 10.097V19.5A1.5 1.5 0 004.5 21h4.75a.75.75 0 00.75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 001.5-1.5v-9.403a1.5 1.5 0 00-.53-1.144l-7.5-6.363z"
+                    ></path>
+                  </svg>
+
+                  <a href="homePage.html">Home</a>
+                </li>
+                <li class="mt-3 text-muted">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="26"
+                    height="26"
+                    style="
+                      fill: white;
+                      padding-bottom: 4px;
+                      opacity: 50%;
+                      margin-right: 8px;
+                    "
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"
+                    ></path>
+                  </svg>
+                  <a href="#" class="text-muted">Search</a>
+                </li>
+                <li class="mt-3">
+                  <span
+                    ><img
+                      style="
+                        width: 18px;
+                        margin-right: 15px;
+                        opacity: 50%;
+                        padding-bottom: 3px;
+                        margin-left: 7px;
+                      "
+                      src="./assets/sidemenu/library.png"
+                      alt="home" /></span
+                  ><a href="#" class="text-muted">Your Library</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="buttons d-flex"
+              style="
+                flex-direction: column;
+                justify-content: flex-end;
+                /* height: 65%; */
+                align-items: center;
+                position: absolute;
+                bottom: 10px;
+                left: 23px;
+              "
+            >
+              <!-- <button class="sign-up">SIGN UP</button
+              ><button class="login mt-2">LOGIN</button> -->
+              <a href="#" class="install"
+                ><i
+                  id="icons-small"
+                  class="bi bi-arrow-down-circle text-white-50 pr-2"
+                ></i
+                >Install App</a
+              >
+
+              <!-- <p>
+                <a href="#" class="cookie"> Cookie</a> |<a
+                  href="#"
+                  class="privacy"
+                  >Privacy Policy</a
+                >
+              </p> -->
+            </div>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="page-content" id="pageContent">
+        <div id="albumStyle" class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-3 offset-lg-1 py-5">
+              <div class="d-flex justify-content-center">
+                <img
+                  src=".\assets\5.jpg"
+                  class="img-fluid shadow p-2 rounded"
+                />
+              </div>
+              <div class="album-label py-4">
+                <h2 id="album-title">Queen II(Deluxe Edition 2011 Remaster)</h2>
+                <a
+                  class="artist d-flex justify-content-center text-white-50"
+                  href="artistPlusSidebar.html"
+                  >Queen</a
+                >
+
+                <div class="d-flex justify-content-center py-3">
+                  <button type="button" class="play-btn btn btn-success">
+                    PLAY
+                  </button>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <span class="label year text-white-50 px-1">1995 </span>
+                  <span class="label text-white-50"
+                    ><i id="icons-small" class="bi bi-dot text-white-50"></i
+                  ></span>
+                  <span class="label text-nowrap text-white-50 px-1">
+                    15 SONGS
+                  </span>
+                </div>
+                <div class="d-flex justify-content-center py-4">
+                  <i id="icons-small" class="like liked bi bi-heart pr-3"></i>
+
+                  <i
+                    id="icons-small"
+                    class="threeDots bi bi-three-dots px-3 text-white-50"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="songs col-12 col-lg-8 py-2 py-lg-5">
+              <div class="sgs row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Procession - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">1:13</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Father To Son - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">6:13</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  White Queen(As it Began) - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:33</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Some Day One Day - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">1:13</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  The March Of The Black Queen - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:16</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  See What A Fool I've Been - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:82</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Some Day One Day - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:22</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  The Loser In The End - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:01</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Ogre Battle - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:08</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  The Fairy Feller's Master- Stroke - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">2:40</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Nevermore - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">1:18</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  The March Of The Black Queen - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">6:32</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Funny How Love Is - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">2:49</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  Seven Seas Of Rhye - Remastered 2011 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">2:48</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  See What A Fool Ive Been - Live BBC Session, London/July
+                  1973/2011 Remix <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">4:22</div>
+              </div>
+              <div class="row d-flex justify-content-center pb-3">
+                <p class="text-white-50">
+                  <i id="icons-small" class="bi bi-music-note"></i>
+                </p>
+                <div class="col-9">
+                  White Queen(As it Began) - Live At Hammersmith Odeon,
+                  London/December 1975 <br /><a
+                    href="artistPlusSidebar.html"
+                    class="artist text-white-50"
+                    >Queen</a
+                  >
+                </div>
+                <div class="col-2 text-white-50">5:32</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer>
+      <div class="container-fluid px-0">
+        <nav class="player navbar navbar-dark">
+          <a class="navbar-brand" href="#">
+            
+          </a>
+        </nav>
+      </div>
+    </footer> -->
+
+    <section>
+      <div id="player">
+        <div
+          id="playerContainer"
+          class="container-fluid m-0 p-0 d-flex align-items-center"
+        >
+          <div class="row d-flex w-100 m-0 p-0 align-items-center">
+            <div
+              class="col-12 col-sm-3 col-xl-2 m-0 p-0 d-flex align-items-center"
+            >
+              <div class="row ml-0 p-4 p-sm-2 d-flex align-items-center">
+                <div
+                  id="cover"
+                  class="col-4 col-md-3 m-0 p-0 d-flex align-items-center"
+                >
+                  <img
+                    id="musicImage"
+                    src="assets/albumCover9.jpg"
+                    alt="Current Music Image"
+                  />
+                </div>
+                <div class="col-8 m-0 p-0 d-flex align-items-center">
+                  <div class="row m-0 p-0 d-flex align-items-center">
+                    <div class="col-12 m-0 p-0 d-flex align-items-center">
+                      <div class="row m-0 p-0 d-flex align-items-center">
+                        <div id="musicText" class="col-5 m-0 p-0">
+                          <div class="col-12 m-0 p-2 lin-clamp">
+                            <span
+                              ><a class="musicName" href=""
+                                >White Dragon, Tbak
+                              </a></span
+                            >
+                          </div>
+                        </div>
+                        <div id="like" class="col-auto m-0 p-2">
+                          <img
+                            src="icons/heart.png"
+                            alt="like icon"
+                            width="18"
+                            height="18"
+                          />
+                          <img
+                            src="icons/screen.png"
+                            alt="Screen icon"
+                            width="18"
+                            height="18"
+                            class="d-sm-none d-md-inline-block ml-lg-2"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ///////////////////////////////////////// -->
+            <div class="col-12 col-sm-4 col-xl-5 d-flex align-items-center">
+              <div class="container m-0 p-0">
+                <div
+                  id="icons"
+                  class="row d-flex justify-content-around pt-2 align-items-center"
+                >
+                  <div
+                    id="iconContainer"
+                    class="col-6 d-flex justify-content-around align-items-center"
+                  >
+                    <img
+                      src="icons/shuffle.png"
+                      alt="shuffle icon"
+                      width="18"
+                      height="18"
+                    />
+                    <img
+                      src="icons/previouse.png"
+                      alt="previouse icon"
+                      width="18"
+                      height="18"
+                    />
+                    <img
+                      src="icons/play.png"
+                      alt="play icon"
+                      width="18"
+                      height="18"
+                    />
+                    <img
+                      src="icons/next.png"
+                      alt="next icon"
+                      width="18"
+                      height="18"
+                    />
+                    <img
+                      src="icons/repeat.png"
+                      alt="repeat icon"
+                      width="18"
+                      height="18"
+                    />
+                  </div>
+                </div>
+                <div class="row d-flex align-items-center">
+                  <div class="col-12 d-flex align-items-center">
+                    <span class="span">0:00</span>
+                    <hr class="hr" />
+                    <span class="span">0:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ////////////////////////////////////////////// -->
+            <div
+              class="col-12 col-sm-5 p-3 p-sm-0 d-flex justify-content-center justify-content-sm-end align-items-center"
+            >
+              <div id="queue" class="col-1">
+                <img
+                  src="icons/queue.png"
+                  alt="volume icon"
+                  width="18"
+                  height="18"
+                />
+              </div>
+              <div id="connect" class="col-1">
+                <img
+                  src="icons/connect.png"
+                  alt="connect icon"
+                  width="18"
+                  height="18"
+                />
+              </div>
+              <div id="volume" class="col-1">
+                <img
+                  src="icons/volume.png"
+                  alt="volume icon"
+                  width="20"
+                  height="20"
+                />
+              </div>
+              <div class="col-5 col-sm-3"><hr class="hr" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let isOpen = false;
+      const openMenu = function () {
+        let menuBody = document.getElementById("menuBody");
+
+        if (isOpen == true) {
+          menuBody.classList.add("d-none");
+          document.getElementById("menu-button").style.opacity = 100;
+          document.getElementById("close-button").style.opacity = 0;
+          isOpen = false;
+        } else {
+          menuBody.className = "menu-body";
+          document.getElementById("menu-button").style.opacity = 0;
+          document.getElementById("close-button").style.opacity = 100;
+
+          isOpen = true;
+        }
+      };
+      menuBody.classList.remove = "d-none";
+      let menuButton = document.getElementById("menu-button");
+      menuButton.addEventListener("click", openMenu);
+      document
+        .getElementById("close-button")
+        .addEventListener("click", openMenu);
+
+      const clickLike = function () {
+        let like = document.querySelector(".bi-heart");
+
+        like.addEventListener("click", function (e) {
+          e.target.classList.toggle("liked");
+        });
+      };
+      clickLike();
+    </script>
+  </body>
+</html>
