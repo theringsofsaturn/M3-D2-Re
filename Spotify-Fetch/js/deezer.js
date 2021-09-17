@@ -43,7 +43,7 @@ function SingleAlbum(album) {
       style="width: 100%"
     />
     <a
-      href="./artistPlusSidebar.html"
+      href="./album.html"
       style="
         display: flex;
         text-decoration: none;
