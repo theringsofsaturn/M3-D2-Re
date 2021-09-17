@@ -1,4 +1,5 @@
 let albums = [];
+let error = false;
 
 function searchDeezer(query) {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + query, {
@@ -9,19 +10,23 @@ function searchDeezer(query) {
     },
   })
     .then((response) => response.json())
-    .then((deezer) => {
+    .then((data) => {
       // resolved
       console.log("resolved");
-      console.log(deezer);
 
-      const musicObject = { title: query, albums: deezer.data };
-        albums.push(musicObject);
+      if (data.data) {
+        const obj = { title: query, albums: data.data };
+        albums.push(obj);
         console.log(albums);
+      } else {
+        error = true;
+      }
     })
     .catch((err) => {
       // rejected
       console.log("rejected");
       console.error(err);
+      error = true;
     });
 }
 
@@ -52,7 +57,7 @@ function SingleAlbum(album) {
     >
   </div>`;
 }
-function AlbumsRow(title, fetchedAlbums) {
+function AlbumsRow(title, albumsHTML) {
   return `<div class="albums mt-5">
     <h2 class="mb-3 pl-5">${title}</h2>
     <div
@@ -63,22 +68,21 @@ function AlbumsRow(title, fetchedAlbums) {
         align-items: center;
       "
     >
-       ${fetchedAlbums}
+       ${albumsHTML}
   </div>
 `;
 }
 
 window.onload = function () {
-  searchDeezer("Eminem");
-  searchDeezer("Metallica");
-  searchDeezer("Behemoth");
-  const apiCall = document.querySelector("#apicall");
+  searchDeezer("Pink Floyd");
+  searchDeezer("Eric Clapton");
+  searchDeezer("Jimi Hendrix");
+  const renderLink = document.querySelector("#render");
 
-  apiCall.addEventListener("click", function () {
-    alert("You searched for artists")
-    let existingContent = document.querySelector(".page-content");
+  renderLink.addEventListener("click", function () {
+    let pageContent = document.querySelector(".page-content");
     let pageContentHTML = "";
-    existingContent.childNodes.forEach((node, index) => {
+    pageContent.childNodes.forEach((node, index) => {
       if (index !== 1) {
         node.remove();
       }
@@ -98,6 +102,16 @@ window.onload = function () {
       pageContentHTML += AlbumsRow(title, rowContent);
       rowContent = "";
     });
-    existingContent.innerHTML += pageContentHTML;
+    pageContent.innerHTML += pageContentHTML;
   });
 };
+
+function countUniqueAlbums() {
+  const albums = document.querySelectorAll(".single-album");
+  const ids = [];
+  albums.forEach((album) => {
+    ids.push(album.id);
+  });
+  const uniqueSet = new Set(ids);
+  console.log(`There is ${uniqueSet.size} unique albums on the page!`);
+}
