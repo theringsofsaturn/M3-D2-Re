@@ -507,9 +507,10 @@
     clickLike();
 
     window.onload = () => {
-      const parent = document.querySelector("#albumStyle .row")
-      const query = new URLSearchParams(document.location.search).get("albumId")
 
+      const parent = document.querySelector("#albumStyle .row")
+
+      const query = new URLSearchParams(document.location.search).get("albumId")
       console.log("Album Id query:", query);
 
       fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + query, {
@@ -550,6 +551,26 @@
               </div>
             </div>
           </div>`
+
+          parent.innerHTML = album
+
+          const songsList = `<div class="songs col-12 col-lg-8 py-2 py-lg-5">
+            ${data.tracks.data.map(song => `<div class="songs col-12 col-lg-8 py-2 py-lg-5">
+            <div class="sgs row d-flex justify-content-center pb-3">
+              <p class="text-white-50">
+                <i id="icons-small" class="bi bi-music-note"></i>
+              </p>
+              <div class="col-9">
+                ${song.title} <br /><a href="artistPlusSidebar.html"
+                  class="artist text-white-50">${data.artist.name}</a>
+              </div>
+              <div class="col-2 text-white-50">${song.duration}</div>
+            </div>`)
+              .join("")}
+            </div>`
+
+          parent.innerHTML += songsList
+
         })
         .catch(error => console.log(error))
     }
