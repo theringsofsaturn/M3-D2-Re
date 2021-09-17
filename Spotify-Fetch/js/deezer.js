@@ -43,7 +43,7 @@ function SingleAlbum(album) {
       style="width: 100%"
     />
     <a
-      href="./album.html"
+      href="./album.html?albumId=${album.id}"
       style="
         display: flex;
         text-decoration: none;
