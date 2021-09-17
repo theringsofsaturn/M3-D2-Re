@@ -12,7 +12,7 @@ function searchDeezer(query) {
     .then((response) => response.json())
     .then((data) => {
       // resolved
-      console.log("resolved");
+      console.log(data, "resolved");
 
       if (data.data) {
         const obj = { title: query, albums: data.data };
@@ -43,7 +43,7 @@ function SingleAlbum(album) {
       style="width: 100%"
     />
     <a
-      href="./album.html"
+      href="./album.html?albumId=${album.id}"
       style="
         display: flex;
         text-decoration: none;
