@@ -510,6 +510,18 @@
       const query = new URLSearchParams(document.location.search).get("albumId")
 
       console.log("Album Id query:", query);
+
+      fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + query, {
+        method: "GET",
+        headers: {
+          "x-rapidapi-key": "ff4ac76422msh07095884ca0fdf8p1817bejsn6312dcac21c7",
+          "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Data", data);
+        })
     }
   </script>
 </body>
