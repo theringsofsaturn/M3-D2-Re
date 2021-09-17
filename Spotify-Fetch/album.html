@@ -505,6 +505,12 @@
       });
     };
     clickLike();
+
+    window.onload = () => {
+      const query = new URLSearchParams(document.location.search).get("albumId")
+
+      console.log("Album Id query:", query);
+    }
   </script>
 </body>
 

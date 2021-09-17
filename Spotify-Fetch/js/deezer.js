@@ -12,7 +12,7 @@ function searchDeezer(query) {
     .then((response) => response.json())
     .then((data) => {
       // resolved
-      console.log("resolved");
+      console.log(data, "resolved");
 
       if (data.data) {
         const obj = { title: query, albums: data.data };
