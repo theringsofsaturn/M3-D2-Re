@@ -15,6 +15,10 @@
   src: url("lineto-circular-pro-medium.ttf");
 }
 
+body {
+  background-color: #191919;
+}
+
 body main div.page-content div#albumStyle {
   background-color: #191919;
 }

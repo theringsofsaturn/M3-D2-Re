@@ -1,0 +1,31 @@
+.page-content {
+  background-color: #191919;
+}
+.searchbar {
+  /* position: fixed; */
+  /* position: absolute; */
+  margin-left: 130px !important;
+  margin-top: 20px;
+  /* width: 20%;
+  /* height: 35px !important; */
+  height: 40px;
+
+  width: 30%;
+  outline: none;
+  border: 2px solid;
+  border-radius: 25px;
+  padding-left: 15px;
+}
+.music-card {
+  background-color: rgb(109, 86, 22);
+  opacity: 0.8;
+}
+.music-card:hover {
+  background-color: rgb(211, 165, 39);
+  opacity: 1;
+}
+
+/* .fas {
+  color: black;
+  background-color: blanchedalmond;
+} */
